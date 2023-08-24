@@ -41,7 +41,7 @@ spec:
     stage('Checkout') {
       steps {
         container('maven') {
-          git branch: 'main', url: 'https://github.com/easy9413/hello-myweb-kube.git'
+          git branch: 'main', url: 'https://github.com/easy9413/test-maven-java-spring-hello-webapp.git'
         }
       }
     }
