@@ -12,6 +12,12 @@ spec:
     - sleep
     args:
     - infinity
+  - name: git
+    image: alpine/git
+    command:
+    - sleep
+    args:
+    - infinity
   - name: kaniko
     image: gcr.io/kaniko-project/executor:debug
     command:
@@ -56,7 +62,7 @@ spec:
     stage('Build & Tag & Push Docker Image') {
       steps {
         container('kaniko') {
-          sh 'executor --context=dir://$WORKSPACE --destination=easy1394/myweb:$BUILD_NUMBER --destination=easy1394/myweb:latest'
+sh 'executor --context=dir://$WORKSPACE --destination=easy1394/myweb:$BUILD_NUMBER --destination=easy1394/myweb:latest'
         }
       }
     }
