@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: easy1394/myweb:10
+        image: easy1394/myweb:13
         ports:
         - containerPort: 8080
